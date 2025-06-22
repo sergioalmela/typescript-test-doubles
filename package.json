@@ -1,0 +1,34 @@
+{
+  "name": "typescript-test-doubles",
+  "version": "1.0.0",
+  "description": "Practical TypeScript examples demonstrating test doubles",
+  "scripts": {
+    "lint:format": "biome format --write",
+    "lint:lint": "biome lint --write",
+    "lint:check": "biome check --write",
+    "lint": "npm run lint:format && npm run lint:lint && npm run lint:check",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergioalmela/typescript-test-doubles.git"
+  },
+  "keywords": [
+    "typescript",
+    "test",
+    "typescript-example",
+    "test-doubles",
+    "testing"
+  ],
+  "author": "sergioalmela",
+  "license": "See LICENSE",
+  "bugs": {
+    "url": "https://github.com/sergioalmela/typescript-test-doubles/issues"
+  },
+  "homepage": "https://github.com/sergioalmela/typescript-test-doubles#readme",
+  "devDependencies": {
+    "@biomejs/biome": "2.0.4",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
