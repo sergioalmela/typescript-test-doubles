@@ -39,10 +39,6 @@ export class User {
     return this._email
   }
 
-  public get createdAt(): Date {
-    return this._createdAt
-  }
-
   /**
    * Updates the user's email if a different one is provided.
    */

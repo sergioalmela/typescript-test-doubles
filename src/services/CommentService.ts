@@ -14,3 +14,16 @@ export interface CommentService {
     content: string
   ): Promise<void>
 }
+
+export class DatabaseCommentService implements CommentService {
+  async addComment(
+    articleId: ArticleId,
+    userId: UserId,
+    content: string
+  ): Promise<void> {
+    // In a real implementation, this would save the comment to a database
+    console.log(
+      `Comment added to article ${articleId} by user ${userId}: "${content}"`
+    )
+  }
+}

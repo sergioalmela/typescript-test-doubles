@@ -18,7 +18,7 @@ export class UserId {
   }
 
   /**
-   * Re-creates an UserId from its string representation (e.g. when loading from a database).
+   * Re-creates a UserId from its string representation (e.g. when loading from a database).
    */
   public static fromString(id: string): UserId {
     return new UserId(id)

@@ -6,11 +6,8 @@ export interface NotificationService {
     articleId: ArticleId,
     title: string
   ): Promise<void>
-  notifyCommentAdded(
-    authorId: string,
-    articleId: ArticleId,
-    commenterName: string
-  ): Promise<void>
+  notifyUserEmailChanged(userId: string, commenterName: string): Promise<void>
+  notifyUserRegistered(userId: string, email: string): Promise<void>
 }
 
 /**
@@ -29,14 +26,17 @@ export class EmailNotificationService implements NotificationService {
     )
   }
 
-  async notifyCommentAdded(
-    authorId: string,
-    articleId: ArticleId,
+  async notifyUserEmailChanged(
+    userId: string,
     commenterName: string
   ): Promise<void> {
     // In real implementation, this would send an email
     console.log(
-      `Sending email to ${authorId}: ${commenterName} commented on your article ${articleId}.`
+      `Sending email to ${userId}: Your email has been changed by ${commenterName}.`
     )
+  }
+  async notifyUserRegistered(userId: string, email: string): Promise<void> {
+    // In real implementation, this would send a welcome email
+    console.log(`Sending welcome email to ${userId} at ${email}.`)
   }
 }
